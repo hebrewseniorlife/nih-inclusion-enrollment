@@ -1,0 +1,13 @@
+name: nih_inclusion_enrollment_report_example
+title: NIH Inclusion Enrollment Report Example
+username: timothytsai
+account: timothytsai
+server: ifar-connect.hsl.harvard.edu
+hostUrl: https://ifar-connect.hsl.harvard.edu/__api__
+appId: 361
+bundleId: 2106
+url: https://ifar-connect.hsl.harvard.edu/content/c8108196-fb47-4319-a9d7-5f10a8887a2f/
+when: 1682541711.31689
+lastSyncTime: 1682541711.31689
+asMultiple: FALSE
+asStatic: TRUE

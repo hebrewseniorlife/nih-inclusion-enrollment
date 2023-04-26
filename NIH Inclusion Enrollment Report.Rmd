@@ -1,0 +1,47 @@
+---
+title: "NIH Inclusion Enrollment Report Example"
+date: "`r Sys.Date()`"
+output: distill::distill_article
+---
+
+```{r setup, include=FALSE}
+library(tidyverse)
+library(downloadthis)
+library(gt)
+library(gtsummary)
+
+knitr::opts_chunk$set(echo = FALSE)
+
+source("create_dataset.R")
+source("create_table.R")
+```
+
+**Enrollment** data as of: `r cutoff`
+
+**Age and gender** data as of: (insert parsed date here)
+
+**Race and ethnicity** data as of: (insert parsed date here) 
+
+```{r}
+# output the table
+incl_enrollment_tab %>% 
+  as_gt() %>% 
+  tab_header(title = "Cumulative Inclusion Enrollment")
+```
+
+## Download data as CSV
+
+```{r}
+# create a button to download the CSV
+output_db %>% 
+  as.data.frame() %>% 
+  download_this(
+    output_name = "Gen3 Exam 4 Inclusion Enrollment Data",
+    output_extension = ".csv",
+    button_label = "Download data",
+    button_type = "primary",
+    has_icon = TRUE,
+    icon = "fa fa-save",
+    csv2 = FALSE
+  )
+```
