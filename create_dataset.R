@@ -62,7 +62,7 @@ reporting_db <- race_db %>%
     ),
     gender = factor(
       gender,
-      levels = c("Female", "Male", "Unknown/Not Reported")
+      levels = c("Female", "Male", "Unknown or Not Reported")
     )
   ) %>% 
   select(studyid, ethnicity, race, gender, age, age_units)
